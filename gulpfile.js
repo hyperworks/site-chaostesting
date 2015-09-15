@@ -9,7 +9,7 @@ var awspublish = require('gulp-awspublish');
 gulp.task('publish_chaostesting', function() {
  
   // create a new publisher 
-  var publisher = awspublish.create({ bucket: 'chaostesting.com' });
+  var publisher = awspublish.create({ Bucket: 'chaostesting.com' });
  
   // define custom headers 
   var headers = {
@@ -20,7 +20,7 @@ gulp.task('publish_chaostesting', function() {
   gulp.src('./static/**')
  
      // gzip, Set Content-Encoding headers and add .gz extension 
-//    .pipe(awspublish.gzip({ ext: '.gz' }))
+    .pipe(awspublish.gzip({ ext: '.gz' }))
  
     // publisher will add Content-Length, Content-Type and headers specified above 
     // If not specified it will set x-amz-acl to public-read by default 
@@ -37,7 +37,7 @@ gulp.task('publish_chaostesting', function() {
 gulp.task('publish_chaosgopher', function() {
  
   // create a new publisher 
-  var publisher = awspublish.create({ bucket: 'chaosgopher.com' });
+  var publisher = awspublish.create({ Bucket: 'chaosgopher.com' });
  
   // define custom headers 
   var headers = {
@@ -48,7 +48,7 @@ gulp.task('publish_chaosgopher', function() {
   gulp.src('./static/**')
  
      // gzip, Set Content-Encoding headers and add .gz extension 
-//    .pipe(awspublish.gzip({ ext: '.gz' }))
+    .pipe(awspublish.gzip({ ext: '.gz' }))
  
     // publisher will add Content-Length, Content-Type and headers specified above 
     // If not specified it will set x-amz-acl to public-read by default 
