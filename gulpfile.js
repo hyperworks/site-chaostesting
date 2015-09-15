@@ -17,7 +17,7 @@ gulp.task('publish_chaosgopher', function() {
      // ... 
    };
  
-  gulp.src('./static/**')
+  gulp.src('./chaosgopher_com/**')
  
      // gzip, Set Content-Encoding headers and add .gz extension 
     .pipe(awspublish.gzip({ ext: '.gz' }))
@@ -45,7 +45,7 @@ gulp.task('publish_chaostesting', function() {
      // ... 
    };
  
-  gulp.src('./static/**')
+  gulp.src('./chaostesting_com/**')
  
      // gzip, Set Content-Encoding headers and add .gz extension 
     .pipe(awspublish.gzip({ ext: '.gz' }))
